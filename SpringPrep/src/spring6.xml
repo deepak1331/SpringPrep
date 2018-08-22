@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="triangle" class="edu.deepak._06_ConstrucorInjection.Triangle">
+		<!-- Constructor Injection Example -->
+		<constructor-arg value="Acute Angle" />
+		<constructor-arg value="20" />
+	</bean>
+
+	<bean id="triangle-index" class="edu.deepak._06_ConstrucorInjection.Triangle">
+		<!-- Constructor Injection Example -->
+		<constructor-arg index="1" value="15" />
+		<constructor-arg  index="0" value="Obtuse Angle" />
+	</bean>
+
+	<bean id="triangle-type" class="edu.deepak._06_ConstrucorInjection.Triangle">
+		<!-- Constructor Injection Example -->
+		<constructor-arg value="Right Angle" />
+	</bean>
+
+	<bean id="triangle-height" class="edu.deepak._06_ConstrucorInjection.Triangle">
+		<!-- Constructor Injection Example -->
+		<constructor-arg type="int" value="20" />
+	</bean>
+
+
+</beans>
