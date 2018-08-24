@@ -9,7 +9,7 @@
 
 	<bean id="triangle1" class="edu.deepak._13_BeanDefinitionInheritance.Triangle"
 		parent="parentTriangle">
-		<property name="pointC" ref="pointC" />
+		<property name="pointB" ref="pointB" />
 	</bean>
 
 
@@ -38,8 +38,8 @@
 		<property name="y" value="10" />
 	</bean>
 
-	<bean id="parentPolygon" class="edu.deepak._13_BeanDefinitionInheritance.Polygon">
-		<property name="points">
+	<bean id="parentPolygon" class="edu.deepak._13_BeanDefinitionInheritance.Polygon" abstract="true">
+		<property name="points" >
 			<list>
 				<ref bean="pointA" />
 			</list>
