@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="parentTriangle" class="edu.deepak._13_BeanDefinitionInheritance.Triangle">
+		<property name="pointA" ref="pointA" />
+	</bean>
+
+	<bean id="triangle1" class="edu.deepak._13_BeanDefinitionInheritance.Triangle"
+		parent="parentTriangle">
+		<property name="pointC" ref="pointC" />
+	</bean>
+
+
+	<bean id="triangle2" class="edu.deepak._13_BeanDefinitionInheritance.Triangle"
+		parent="parentTriangle">
+		<property name="pointC" ref="pointC" />
+		<property name="pointB" ref="pointB" />
+	</bean>
+
+	<bean id="pointA" class="edu.deepak._13_BeanDefinitionInheritance.Point"
+		scope="prototype">
+		<property name="x" value="10" />
+		<property name="y" value="20" />
+	</bean>
+
+	<bean id="pointB" class="edu.deepak._13_BeanDefinitionInheritance.Point"
+		scope="prototype">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+
+
+	<bean id="pointC" class="edu.deepak._13_BeanDefinitionInheritance.Point"
+		scope="prototype">
+		<property name="x" value="20" />
+		<property name="y" value="10" />
+	</bean>
+
+	<bean id="parentPolygon" class="edu.deepak._13_BeanDefinitionInheritance.Polygon">
+		<property name="points">
+			<list>
+				<ref bean="pointA" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="polygon1" parent="parentPolygon"
+		class="edu.deepak._13_BeanDefinitionInheritance.Polygon">
+		<property name="points">
+			<list>
+				<ref bean="pointB" />
+			</list>
+		</property>
+	</bean>
+
+<bean id="polygon2" parent="parentPolygon"
+		class="edu.deepak._13_BeanDefinitionInheritance.Polygon">
+		<property name="points">
+			<list merge="true">
+				<ref bean="pointB" />
+			</list>
+		</property>
+	</bean>
+
+
+</beans>
