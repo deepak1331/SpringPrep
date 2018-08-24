@@ -32,8 +32,14 @@ public class Triangle {
 
 	public void draw() {
 		System.out.println("PointA: (" + getPointA().getX() + ", " + getPointA().getY() + ")");
-		System.out.println("PointB: (" + getPointB().getX() + ", " + getPointB().getY() + ")");
+		if (getPointB() != null)
+			System.out.println("PointB: (" + getPointB().getX() + ", " + getPointB().getY() + ")");
+		else
+			System.out.println("PointB: null");
+		if (getPointC() != null)
 		System.out.println("PointC: (" + getPointC().getX() + ", " + getPointC().getY() + ")");
+		else
+			System.out.println("PointC: null");
 	}
 
 }
