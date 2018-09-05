@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="triangle" class="edu.deepak._14_LifeCycleCallback.Triangle"
+		autowire="byName" />
+
+
+<bean id="circle" class="edu.deepak._14_LifeCycleCallback.Circle"
+		autowire="byName" init-method="myInit" destroy-method="myDestroy"/>
+
+	<bean id="a" class="edu.deepak._14_LifeCycleCallback.Point">
+		<property name="x" value="5" />
+		<property name="y" value="10" />
+	</bean>
+	<bean id="b" class="edu.deepak._14_LifeCycleCallback.Point">
+		<property name="x" value="10" />
+		<property name="y" value="15" />
+	</bean>
+	<bean id="c" class="edu.deepak._14_LifeCycleCallback.Point">
+		<property name="x" value="15" />
+		<property name="y" value="20" />
+	</bean>
+
+</beans>
+
