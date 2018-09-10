@@ -2,7 +2,9 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
     "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
-<beans>
+<!-- We can declare the default init & destroy method at global level (for all the beans like below) -->
+<!-- <beans default-init-method="myInit" default-destroy-method="myDestroy"> -->
+<beans> 
 	<bean id="triangle" class="edu.deepak._14_LifeCycleCallback.Triangle"
 		autowire="byName" />
 

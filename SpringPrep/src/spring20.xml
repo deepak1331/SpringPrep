@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- To use @Qualifer annotation we need to use complete xml namespaces list, 
+	instead of just beans tab -->
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" -->
+<!-- "http://www.springframework.org/dtd/spring-beans-2.0.dtd"> -->
+<!-- <beans> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+
+
+	<bean id="triangle" class="edu.deepak._20_JSR_250_Annotations.Triangle" />
+
+	<bean id="circle" class="edu.deepak._20_JSR_250_Annotations.Circle">
+	</bean>
+
+	<bean id="pointA" class="edu.deepak._20_JSR_250_Annotations.Point">
+	<property name="x" value="0" />
+	<property name="y" value="0" />
+	</bean>
+	<bean id="pointB" class="edu.deepak._20_JSR_250_Annotations.Point">
+	<property name="x" value="10" />
+	<property name="y" value="15" />
+	</bean>
+
+	<bean id="pointC" class="edu.deepak._20_JSR_250_Annotations.Point">
+		<qualifier value="circleRelated" />
+		<property name="x" value="15" />
+		<property name="y" value="20" />
+	</bean>
+	<context:annotation-config />
+</beans>
+
